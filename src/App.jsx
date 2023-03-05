@@ -1,17 +1,26 @@
-import ItemListContainer from "./components/ItemListContainer";
+import ItemListContainer from './components/ItemListContainer'
 import NavBar from "./components/NavBar";
-import { ChakraProvider, Image} from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import './styles.css'
-
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Bienvenida from './components/Bienvenida';
 const App = () => {
+  
   return <>
+  <BrowserRouter>
   <ChakraProvider>
   <NavBar/>
-  <ItemListContainer greeting={"Bienvenidos a My watch, tu tienda de relojes de confianza"}/>
-  <div className="relojes">
-  <Image boxSize='300px' src='https://images.pexels.com/photos/380782/pexels-photo-380782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='relojes'/>
-  </div>
-  </ChakraProvider>
+  
+  <Routes>
+    <Route exact path='/' element={<Bienvenida/>}/>
+    <Route exact path='/catalogo' element={<ItemListContainer/>}/>
+    <Route exact path="/marcas/:marcas" element={<ItemListContainer/>}/>
+    <Route exact path='/detalles' element={<ItemDetailContainer/>}/>
+  </Routes>
+  
+  </ChakraProvider>  
+  </BrowserRouter>
   </>;
 };
 

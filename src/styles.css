@@ -19,13 +19,17 @@
 }
 .navbar .iconoCarrito {
   padding-top: 5px;
-  
 }
-.bienvenida{
-    text-align: center;
+.main-catalogo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
 }
-.relojes{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+.itemCards{
+  padding: 10px;
+  max-width: 50%;
+  max-height: 25%;
+  flex-wrap: wrap;
 }
