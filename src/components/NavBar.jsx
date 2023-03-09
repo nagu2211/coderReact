@@ -20,7 +20,7 @@ const NavBar = () => {
         <Image
             borderRadius="full"
             boxSize="40px"
-            src="https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Dan Abramov"
         />
         <h1>My Watch</h1>

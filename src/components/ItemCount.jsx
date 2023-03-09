@@ -12,13 +12,17 @@ const ItemCount = ({stock}) => {
  const sumar = () => {
   if(cantidad < stock){
     setCantidad(cantidad + 1);
-  } 
+  } else {
+    alert('Maximo stock disponible')
+  }
  }
  
  const restar = () => {
   if(cantidad > 1){
     setCantidad(cantidad - 1);
-  } 
+  } else {
+    alert('Minimo de unidades alcanzadas')
+  }
  }
 
  return (

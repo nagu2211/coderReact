@@ -6,6 +6,8 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Bienvenida from './components/Bienvenida';
 const App = () => {
+
+
   
   return <>
   <BrowserRouter>
@@ -16,7 +18,7 @@ const App = () => {
     <Route exact path='/' element={<Bienvenida/>}/>
     <Route exact path='/catalogo' element={<ItemListContainer/>}/>
     <Route exact path="/marcas/:marcas" element={<ItemListContainer/>}/>
-    <Route exact path='/detalles' element={<ItemDetailContainer/>}/>
+    <Route exact path="/detalles/:id" element={<ItemDetailContainer />} />
   </Routes>
   
   </ChakraProvider>  
