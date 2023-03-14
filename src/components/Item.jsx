@@ -6,7 +6,6 @@ import {
   Stack,
   Heading,
   Button,
-  Text,
   Image,
   Badge,
   Divider,

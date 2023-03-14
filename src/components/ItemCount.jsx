@@ -1,30 +1,28 @@
-import React from "react";
-import { useState } from "react";
+import React, {useState} from "react";
 import {
   ButtonGroup,
   Button,
   Text,
   } from "@chakra-ui/react";
 
+
 const ItemCount = ({stock}) => {
- const [cantidad , setCantidad] = useState(1)
-
- const sumar = () => {
-  if(cantidad < stock){
-    setCantidad(cantidad + 1);
-  } else {
-    alert('Maximo stock disponible')
+  const [cantidad, setCantidad] = useState(1)
+  const sumar = () =>{
+    if (cantidad < stock){
+      setCantidad(cantidad + 1);
+    } else {
+      alert("maximo stock disponible")
+    }
   }
- }
- 
- const restar = () => {
-  if(cantidad > 1){
-    setCantidad(cantidad - 1);
-  } else {
-    alert('Minimo de unidades alcanzadas')
-  }
- }
 
+  const restar = () =>{
+    if(cantidad > 1){
+      setCantidad(cantidad - 1);
+    } else {
+      alert("minima cantidad alcanzada");
+    }
+  }
  return (
     <div>
       
@@ -36,7 +34,7 @@ const ItemCount = ({stock}) => {
               <Button variant="solid" colorScheme="blue" onClick={sumar}>
                 +
               </Button>
-              <Button variant="solid" colorScheme="blue" >
+              <Button variant="solid" colorScheme="blue">
                 Añadir al carrito
               </Button>
             </ButtonGroup>
